@@ -1,46 +1,32 @@
-🚗 Car Price Prediction System (Regression)
-🔍 Project Overview:
-Build a machine learning model that predicts the price of a used car based on features like brand, fuel type, transmission, mileage, year, etc.
+# 🚗 Car Price Prediction App
 
-It’s a regression problem, not classification — so the goal is to predict a numeric value (price) instead of a category.
+![Streamlit](https://img.shields.io/badge/Built%20with-Streamlit-ff4b4b?logo=streamlit)
+![scikit-learn](https://img.shields.io/badge/ML%20Model-RandomForestRegressor-orange)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-Complete-brightgreen)
 
-📁 Dataset:
-Use this Kaggle dataset:
-🚗 Used Cars Dataset – India (Kaggle)
+A simple yet powerful machine learning web app that predicts the **resale value** of a used car based on inputs like fuel type, transmission, KMs driven, and more.
 
-Use kagglehub to download:
+---
 
-python
-Copy
-Edit
-import kagglehub
-path = kagglehub.dataset_download("nehalbirla/vehicle-dataset-from-cardekho")
-print("Dataset downloaded at:", path)
-📌 Features You’ll Work With:
-Feature	Description
-Car_Name	Name of the car
-Year	Year the car was bought
-Selling_Price	Target: price to predict (in lakhs)
-Present_Price	Price when car was new
-Kms_Driven	Kilometers driven
-Fuel_Type	Petrol / Diesel / CNG
-Seller_Type	Dealer / Individual
-Transmission	Manual / Automatic
-Owner	0/1/2/3 – Number of previous owners
+## 📸 Screenshot
 
-🧠 What You'll Learn:
-Feature Engineering (e.g., age of car = current year - purchase year)
+![App Screenshot](screenshots/app-ui.png)
 
-Label Encoding for categorical features
+---
 
-Train/Test split + Evaluation
+## 📊 Features
 
-Regression models like LinearRegression, RandomForestRegressor, or XGBoost
+- Interactive UI using **Streamlit**
+- Real-world dataset from [Kaggle](https://www.kaggle.com/datasets/nehalbirla/vehicle-dataset-from-cardekho)
+- Trained on `RandomForestRegressor`
+- Model saved and reused via `joblib`
+- Categorical variables encoded with `LabelEncoder`
+- Predicted output: **Estimated price in ₹ lakhs**
 
-R² Score, MAE, RMSE
+---
 
-📦 Libraries Needed:
-bash
-Copy
-Edit
-pip install pandas numpy scikit-learn matplotlib seaborn kagglehub
+## 🚀 Demo
+
+```bash
+streamlit run app.py
